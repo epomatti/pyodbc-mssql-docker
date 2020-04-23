@@ -2,6 +2,14 @@
 
 An image with Python pyodbc for Microsoft SQL Server.
 
+### Get 
+
+```sh
+docker pull epomatti/pyodbc:tagname
+```
+
+### Testing
+
 SQL Server
 
 ```sh
