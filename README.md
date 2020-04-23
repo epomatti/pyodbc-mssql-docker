@@ -1,6 +1,6 @@
 # Custom Image
 
-A test image with Python pyodbc for Microsoft SQL Server.
+An image with Python pyodbc for Microsoft SQL Server.
 
 SQL Server
 
