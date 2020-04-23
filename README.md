@@ -1,4 +1,4 @@
-# Custom Image
+# pyodbc image
 
 An image with Python pyodbc for Microsoft SQL Server.
 
