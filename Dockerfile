@@ -19,5 +19,3 @@ RUN apt-get install unixodbc-dev
 
 RUN pip install pipenv
 RUN pipenv install --system --deploy
-
-CMD [ "python" , "__init__.py"]

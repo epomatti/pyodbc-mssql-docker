@@ -18,6 +18,7 @@ cp config.dev.ini config.ini
 Build and test
 
 ```sh
-docker image build -t pyodbc .
-docker run pyodbc:latest
+docker image build -t pyodbc:latest .
+docker run -it pyodbc:latest sh
+python3.8 test/connection_test.py
 ```
