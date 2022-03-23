@@ -1,32 +1,31 @@
-# pyodbc image
+# Docker pyodbc + mssql
 
-An image with Python pyodbc for Microsoft SQL Server.
-
-### Get 
+An image with pyodbc for Microsoft SQL Server.
 
 ```sh
-docker pull epomatti/pyodbc:tagname
+docker pull epomatti/pyodbc-mssql:latest
 ```
 
 ### Testing
 
-SQL Server
-
-```sh
-docker pull mcr.microsoft.com/mssql/server
-docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourPassword>' -p 1433:1433 -d mcr.microsoft.com/mssql/server
-```
-
-Copy and edit the configuration file
+Small application for testing the image configuration:
 
 ```sh
 cp config.dev.ini config.ini
+
+docker-compose build
+docker-compose up
 ```
 
-Build and test
+### Docker Hub
+
+Commands for manually publishing the image to Docker Hub:
 
 ```sh
-docker image build -t pyodbc:latest .
-docker run -it pyodbc:latest sh
-python3.8 test/connection_test.py
+export dockerHubImage='epomatti/pyodbc-mssql:latest'
+
+docker image build -t pyodbc-mssql:latest ./image
+docker login --username='<username>'
+docker tag '<image_id>' $dockerHubImage
+docker push $dockerHubImage
 ```
