@@ -6,6 +6,10 @@ on:
   pull_request:
     branches: [ main ]
 
+defaults:
+ run:
+  working-directory: image
+
 jobs:
 
   build:
@@ -15,4 +19,4 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag pyodbc-mssql:latest
+      run: docker build .
