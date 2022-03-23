@@ -1,5 +1,7 @@
 # Docker pyodbc + mssql
 
+![Docker Image CI](https://github.com/epomatti/pyodbc-mssql-docker/actions/workflows/docker-image.yml/badge.svg)
+
 An image with pyodbc for Microsoft SQL Server.
 
 ```sh
