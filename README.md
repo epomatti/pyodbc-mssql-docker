@@ -11,6 +11,7 @@ docker pull epomatti/pyodbc-mssql:latest
 Small application for testing the image configuration:
 
 ```sh
+cd ./test
 cp config.dev.ini config.ini
 
 docker-compose build
